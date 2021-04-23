@@ -57,7 +57,8 @@ presskey(number:string)
        }    
 }   
 ```
-Next, define the getDecimal() method which appends the decimal point to the current number:
+Next, define the getDecimal() method which appends the decimal point to the current number
+
 ```javascript
 getDecimal()
    {
@@ -68,7 +69,9 @@ getDecimal()
   }
   ```
   Next, define the getOperation() that will be used to get the performed operation:
+  
   ```javascript
+
 operation(op:string)	
 {
       console.log(op);  
@@ -114,11 +117,11 @@ operation(op:string)
       this.secondNumber=true;
       console.log(this.firstop);
    }
+    
     ```
 
     Finally, define the clear() method that will be used to clear the result area and reset the calculations
      
-     ```javascript
     public clear() 
    {
      this.currentNumber = '0';
@@ -126,7 +129,7 @@ operation(op:string)
      this.operator = null;
      this.secondNumber = false;
    }
-    ```
+
     Now, you need to use data binding to bind these methods to the template.
     We have defined variables and methods in the component. Now, we'll need to bind them to the template.
     Let's start with the currentNumber variable which holds the value of the currently typed number. Let's use property binding to bind currentNumber to the value attribute of the <input> element as follows:
@@ -140,7 +143,7 @@ operation(op:string)
   ```
 We use brackets around the value attribute to create a property binding.Now, our current number will be displayed in our calculator and when the value of the currentNumber variable changes, the displayed value will change accordingly without having to manually add any code to update the DOM.
 
-Next, when a digit button is clicked we need to call the getNumber() method to append the digit to the current number string. For this, we can use Angular event binding to bind the getNumber() method to the click event of buttons displaying the digits. Changte your component template as follows:
+Next, when a digit button is clicked we need to call the presskey() method to append the digit to the current number string. For this, we can use Angular event binding to bind the presskey() method to the click event of buttons displaying the digits. Changte your component template as follows:
 ```javascript
 
 <div class="calculator">
