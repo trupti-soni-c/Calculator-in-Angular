@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.0.
 
-!(src/assets/Capture/img.png)
+!(src/assets/Capture.png)
 
 ## Development server
 
@@ -34,22 +34,22 @@ Open the src/app/app.component.ts file and start by defining the following membe
 currentNumber='0'; 
 firstop=null;
 operator=null;
-no2=false; 
+secondNumber=false; 
 result; 
 ```
 * The currentNumber variable holds the string that will be displayed in the result input element.
 * The firstop variable holds the value of the first operand of the operation.
 * The operator variable holds the operation.
-* The no2 variable holds a boolean value indicating if the user has finished typing the first operand and ready to enter the second operand of the operation.
+* The secondNumber variable holds a boolean value indicating if the user has finished typing the first operand and ready to enter the second operand of the operation.
 
 Next, define the presskey() method that will be used to get the current number:
 ```javascript
 presskey(number:string) 
 { 
-       if(this.no2) 
+       if(this.secondNumber) 
        {
            this.currentNumber=number;  
-           this.no2=false;  
+           this.secondNumber=false;  
        }
        else
        {
@@ -111,7 +111,7 @@ operation(op:string)
         }
       }
       this.operator=op;
-      this.no2=true;
+      this.secondNumber=true;
       console.log(this.firstop);
    }
     ```
@@ -124,7 +124,7 @@ operation(op:string)
      this.currentNumber = '0';
      this.firstop = null;
      this.operator = null;
-     this.no2 = false;
+     this.secondNumber = false;
    }
     ```
     Now, you need to use data binding to bind these methods to the template.
