@@ -8,17 +8,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 currentNumber='0'; //currentNumber variable holds the string that will be displayed in the result input element
-no2=false; //no2 variable holds a boolean value indicating if the user has finished typing the first operand and ready to enter the second operand of the operation.
+secondNumber=false; //no2 variable holds a boolean value indicating if the user has finished typing the first operand and ready to enter the second operand of the operation.
 result;
 firstop=null; //firstop variable holds the value of the first operand of the operation.
 operator=null; //operator variable holds the operation.
 
 presskey(number:string) //when user click on 0 to 9 number button.presskey() method that will be used to get the current number:
 { 
-       if(this.no2) //by default no2=false
+       if(this.secondNumber) //by default no2=false
        {
            this.currentNumber=number;  //display number into textbox
-           this.no2=false;  
+           this.secondNumber=false;  
        }
        else
        {
@@ -75,7 +75,7 @@ operation(op:string)
         }
       }
       this.operator=op;
-      this.no2=true;
+      this.secondNumber=true;
       console.log(this.firstop);
    }
    public clear() //the clear() method that will be used to clear the result area and reset the calculations:
@@ -83,6 +83,6 @@ operation(op:string)
      this.currentNumber = '0';
      this.firstop = null;
      this.operator = null;
-     this.no2 = false;
+     this.secondNumber = false;
    }
 }
