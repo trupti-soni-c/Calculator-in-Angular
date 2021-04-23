@@ -117,22 +117,7 @@ operation(op:string)
       this.secondNumber=true;
       console.log(this.firstop);
    }
-    
-    ```
 
-    Finally, define the clear() method that will be used to clear the result area and reset the calculations
-     
-    public clear() 
-   {
-     this.currentNumber = '0';
-     this.firstop = null;
-     this.operator = null;
-     this.secondNumber = false;
-   }
-
-    Now, you need to use data binding to bind these methods to the template.
-    We have defined variables and methods in the component. Now, we'll need to bind them to the template.
-    Let's start with the currentNumber variable which holds the value of the currently typed number. Let's use property binding to bind currentNumber to the value attribute of the <input> element as follows:
    
    ```javascript
     <div class="calculator">
