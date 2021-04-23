@@ -25,6 +25,14 @@ presskey(number:string) //when user click on 0 to 9 number button.presskey() met
           this.currentNumber==='0'?this.currentNumber=number:this.currentNumber+=number; //currentNumber variable holds '0' then first condition true otherwise second condition
        }    
 }   
+getDecimal() // getDecimal() method which appends the decimal point to the current number
+{
+   if(!this.currentNumber.includes('.'))
+   {
+     this.currentNumber += '.'; 
+   }
+}
+
 operation(op:string)	
 {
       console.log(op);  
@@ -70,11 +78,11 @@ operation(op:string)
       this.no2=true;
       console.log(this.firstop);
    }
-   getDecimal() // getDecimal() method which appends the decimal point to the current number
+   public clear() //the clear() method that will be used to clear the result area and reset the calculations:
    {
-      if(!this.currentNumber.includes('.'))
-      {
-        this.currentNumber += '.'; 
-      }
-  }
+     this.currentNumber = '0';
+     this.firstop = null;
+     this.operator = null;
+     this.no2 = false;
+   }
 }
