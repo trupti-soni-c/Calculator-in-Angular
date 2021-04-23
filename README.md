@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.0.
 
-!(src/assets/Capture.png)
+![Screenshot](Capture.PNG)
 
 ## Development server
 
@@ -122,7 +122,7 @@ operation(op:string)
 
 Finally, define the clear() method that will be used to clear the result area and reset the calculations:
 ```javascript
-public clear() //the clear() method that will be used to clear the result area and reset the calculations:
+public clear() 
    {
      this.currentNumber = '0';
      this.firstop = null;
